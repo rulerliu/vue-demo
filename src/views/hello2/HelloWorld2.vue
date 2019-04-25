@@ -1,94 +1,67 @@
 <template>
   <div class="hello">
     <h2>views 222</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <span @click="getCityList">调用接口</span>
+
+    <div class="btn-box" v-if="false">
+      <el-button class="btn" type="primary" @click="reset">重置</el-button>
+    </div>
+    <div class="btn-box" v-else>
+      <el-button class="btn" type="primary" @click="cancelSave">取消</el-button>
+    </div>
+    <!--<button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HelloWorld2',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created() {
+
+  },
+  methods: {
+    // 获取地市列表
+    getCityList: function() {
+      const vm = this
+      console.log(this.$util.getUrl("activity-web/rest/invoke?service=20035"))
+
+      vm.$axios({
+        url: this.$util.getUrl("activity-web/rest/invoke?service=20035"),
+        data: {
+          parentCode: "ACTIVITY_CITY"
+        }
+      }).then(res => {
+        // vm.cityList = res.rows
+        console.log(">>>>res.rows:" + res.rows)
+      })
+    },
+    // 取消按钮
+    cancelSave: function () {
+      let vm = this;
+      vm.$confirm("是否取消", "提示", {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        center: true,
+        type: 'warning'
+      }).then(function () {
+        vm.goback('/')
+      }).catch(function () {
+      })
+    },
+
+    goback: function (path) {
+      this.$router.push({
+        path: path
+      })
+      // this.$router.back()
+    },
   }
 }
 </script>

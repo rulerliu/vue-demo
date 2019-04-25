@@ -136,8 +136,7 @@ export default {
   methods: {
     change: function () {
       let vm = this
-      // 核心语句
-      vm.$router.push({
+      this.$router.push({
         path: '/select',
         query: {id: vm.id}
       })
