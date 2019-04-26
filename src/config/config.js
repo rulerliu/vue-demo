@@ -9,11 +9,11 @@ let config = {
 
 
   // port:"http://redpacket.ohaotian.cn/",
-  port:isTest ? "http://redpacket.ohaotian.cn/" : "/", //原来旧的
+  // port:isTest ? "http://redpacket.ohaotian.cn/" : "/", //原来旧的
   // port:"http://192.168.252.2:8181/", //秀测试
   // port:"http://172.16.0.13:8084/", //肖测试
   // port:'http://redpacket.ohaotian.cn/',
-  // port: "http://172.16.0.70:8082/",//文强
+  port: "http://172.16.0.70:8082/",//文强
   // 抢红包页面的publicEntity
   publicEntity:{
     mechanismCode:"9940",

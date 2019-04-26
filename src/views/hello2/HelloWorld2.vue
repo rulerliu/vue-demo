@@ -51,6 +51,7 @@ export default {
         center: true,
         type: 'warning'
       }).then(function () {
+        // 点击确定按钮
         vm.goback('/')
       }).catch(function () {
       })
