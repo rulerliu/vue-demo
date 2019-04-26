@@ -28,3 +28,38 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+npm install element-ui --save
+
+npm install axios --save
+
+npm install mint-ui --save
+
+npm install qrcode --save
+
+npm install iview --save
+
+npm install store --save
+
+npm install lodash --save
+
+npm install build --save
+
+npm install vux --save
+
+npm install vuex --save
+
+
+cnpm install stylus-loader css-loader style-loader --save-dev
+cnpm install less less-loader --save-dev
+
+
+module.exports赋值给webpackConfig
+const vuxLoader = require('vux-loader')
+module.exports = vuxLoader.merge(webpackConfig, {
+  plugins: ['vux-ui']
+})
+
+
+node_modules/less-loader/dist/index.js
+less-loader方法添加options.javascriptEnabled = true

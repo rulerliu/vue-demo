@@ -1,0 +1,93 @@
+@import '~iview/src/styles/index.less';
+//
+//// Here are the variables to cover, such as:
+@primary-color: #e50017;
+.ivu-input-number,
+.ivu-form-item-content {
+  width: 200px;
+}
+.ivu-form-item {
+  //margin-bottom: 20px;
+}
+.ivu-input-number,
+.ivu-select,
+.ivu-input-wrapper[type=text] {
+//  width: 70%;
+  min-width:100px;
+  height: 40px;
+  line-height: 40px;
+}
+.ivu-input-number,
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value,
+.ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection,
+.ivu-input {
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  font-size: 14px;
+}
+.ivu-icon.ivu-icon-ios-clock-outline.ivu-input-icon.ivu-input-icon-normal {
+  line-height: 40px;
+}
+.ivu-select-dropdown {
+  max-height: 300px;
+}
+.ivu-select-item {
+  padding: 14px 16px;
+}
+.ivu-select:hover .ivu-select-selection,
+.ivu-select:focus .ivu-select-selection,
+.ivu-input:hover,
+.ivu-input:focus {
+  border-color: #409EFF;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(229, 0, 23, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 113, 229, 0.2);
+}
+//.ivu-select .ivu-form-item-error-tip {
+//  position: relative;
+//}
+//表格
+.table.ivu-table-wrapper span {
+ font-size: 14px;
+}
+.ivu-table-header thead span {
+  color: #909399;
+}
+.ivu-table-wrapper .ivu-btn {
+  width: auto;
+  margin:0;
+}
+//模态框
+.ivu-modal .ivu-modal-content {
+  max-height:400px;
+  overflow-y: scroll;
+}
+//按钮
+.ivu-btn {
+  width: 120px;
+  height: 40px;
+  margin: 0 10px;
+}
+.ivu-btn-large {
+  padding: 6px 15px;
+}
+
+//message
+.el-message.el-message--error,
+.el-message.el-message--info,
+.el-message--warning,
+.el-message--success {
+  background-color: #4e4949;
+  border: none;
+  top: 45%;
+  opacity: 0.7;
+}
+.el-message--error .el-message__content,
+.el-message--info .el-message__content,
+.el-message--warning .el-message__content,
+.el-message--success .el-message__content {
+  color: #fff;
+}
