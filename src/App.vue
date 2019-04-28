@@ -11,6 +11,7 @@
     <router-link to="/a/1">a</router-link>
     <router-link to="/b/2">b</router-link>
     <router-link to="/b2a/3">b2a</router-link>
+    <router-link to="/upload">upload</router-link>
     <page-header></page-header>
     <router-view/>
     <page-footer></page-footer>

@@ -10,6 +10,8 @@ const sub1 = () => import('@/views/hello1/sub1')
 const sub2 = () => import('@/views/hello1/sub2')
 const a = () => import('@/views/a/a')
 const b = () => import('@/views/b/b')
+const helloInfo = () => import('@/views/hello2/helloInfo')
+const upload = () => import('@/views/upload/upload')
 
 export default [
   {
@@ -88,5 +90,15 @@ export default [
     path: '/b2a/:id',
     name: 'b2a',
     redirect: '/a/:id'
-  }
+  },
+  {
+    path: '/helloInfo',
+    name: 'helloInfo',
+    component: helloInfo
+  },
+  {
+    path: '/upload',
+    name: 'upload',
+    component: upload
+  },
 ]
